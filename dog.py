@@ -24,7 +24,11 @@ class Dog:
         print(str(self.name) + " barks.")
         self.trick_list.append("bark")
 
-    def trick_check(self):
+    def print_trick_list(self):
         if self.trick_list == []:
-            print(str(self.name) + " ")
+            print(str(self.name) + " has not performed any tricks yet.")
+        else:
+            print(str(self.name) + " has performed the following tricks: ")
+            for x in self.trick_list:
+                print(x)
 
