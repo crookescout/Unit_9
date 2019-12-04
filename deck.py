@@ -15,3 +15,4 @@ class Deck:
 
     def deal(self):
         return self.cards.pop()
+

@@ -1,5 +1,6 @@
 # Scout Crooke, 12/02/19, this program works on daily exercises
 
+
 class Dog:
 
     def __init__(self, name):
@@ -31,4 +32,3 @@ class Dog:
             print(str(self.name) + " has performed the following tricks: ")
             for x in self.trick_list:
                 print(x)
-
