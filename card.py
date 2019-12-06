@@ -12,8 +12,7 @@ class Card:
         else:
             if "Spades":
                 return True
-            elif:
-                "Hearts" > "Diamonds" > "Clubs"
+
 
     def __str__(self):
         values = ["Ace", "Two", "Three", "Four", "Five", "Six",
