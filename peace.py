@@ -11,7 +11,7 @@ def deal_cards(deck):
     """
     this function deals 5 cards each to player 1 and player 2
     :param deck:
-    :return: the 5 cards of each player
+    :return: a list of 5 cards of each player
     """
     cards = []
     for x in range(5):
@@ -25,7 +25,7 @@ def compare_cards(card1, card2):
     this function compares each card of player 1 vs. each card of player 2
     :param card1:
     :param card2:
-    :return: True or False
+    :return: True if player 1 won or False if player 2 won
     """
     if card1 > card2:
         print("Player 1 won this round")
@@ -36,12 +36,16 @@ def compare_cards(card1, card2):
 
 
 def main():
+    # this sets each player's beginning score to 0
     player_1_score = 0
     player_2_score = 0
+
+    # this deals the cards to each player
     player_1 = deal_cards(my_deck)
     player_2 = deal_cards(my_deck)
 
     for x in range(5):
+        # this prints out each players card and compares them
         print("This is player 1's card: " + str(player_1[x]))
         print("This is player 2's card: " + str(player_2[x]))
         if compare_cards(player_1[x], player_2[x]):
@@ -49,8 +53,12 @@ def main():
         else:
             player_2_score += 1
         print()
+
+    # this adds points to each player's score depending on if they won the round
     print("This is player 1's score:" + str(player_1_score))
     print("This is player 2's score:" + str(player_2_score))
+
+    # this determines which player won the game based on their scores
     if player_1_score > player_2_score:
         print("Player 1 won this game!")
     else:
