@@ -1,16 +1,12 @@
 # Scout Crooke, 12/05/19, this program plays a game of peace with the user
 
-import card
 import deck
 
-my_deck = deck.Deck()
-my_deck.shuffle()
 
-
-def deal_cards(deck):
+def deal_cards(my_deck):
     """
     this function deals 5 cards each to player 1 and player 2
-    :param deck:
+    :param my_deck:
     :return: a list of 5 cards of each player
     """
     cards = []
@@ -36,6 +32,9 @@ def compare_cards(card1, card2):
 
 
 def main():
+    my_deck = deck.Deck()
+    my_deck.shuffle()
+
     # this sets each player's beginning score to 0
     player_1_score = 0
     player_2_score = 0
